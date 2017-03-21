@@ -15,22 +15,22 @@ public class Vehicule implements Option {
     }
 
     public String toString() {
-       return "+ Voiture "+nom+moteur+options+" d'une valeur totale de "+getPrix()+"€\r\n";
+       return "+ Voiture "+getMarque()+moteur+getOptions()+" d'une valeur totale de "+getPrix()+"€\r\n";
     }
 
     public void addOption(Option opt) {
         options.add(opt);
         prix += opt.getPrix();
     }
-/*
-    public Marque getMarque() {
+
+    private Marque getMarque() {
         return nomMarque;
     }
 
     private List<Option> getOptions() {
         return options;
     }
-*/
+
     public void setMoteur(Moteur moteur) {
         this.moteur = moteur;
         prix = moteur.getPrix();
